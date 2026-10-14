@@ -1,0 +1,13 @@
+{
+  "name": "studio-gabi-lima",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site institucional premium do Studio Gabi Lima, compatível com Node.js e GitHub Pages.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check assets/js/config.js && node --check assets/js/main.js"
+  },
+  "engines": { "node": ">=20" }
+}
