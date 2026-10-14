@@ -1,0 +1,38 @@
+name: Instalar site Studio Gabi Lima
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.upload/part05'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  importar_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Descompactar projeto
+        shell: bash
+        run: |
+          cat .upload/part0{1,2,3,4,5} > /tmp/site.b85
+          python3 - <<'PY'
+          import base64
+          from pathlib import Path
+          Path('/tmp/site.tar.xz').write_bytes(base64.b85decode(Path('/tmp/site.b85').read_text()))
+          PY
+          tar -xJf /tmp/site.tar.xz -C .
+          rm -rf .upload
+          rm -f .github/workflows/install.yml
+          rmdir .github/workflows .github 2>/dev/null || true
+      - name: Publicar arquivos no main
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Publica site institucional do Studio Gabi Lima"
+          git push origin HEAD:main
