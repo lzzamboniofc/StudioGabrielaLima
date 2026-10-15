@@ -82,6 +82,38 @@
   }
 
   const config = window.STUDIO_CONFIG || {};
+
+  // Antes/depois oficial: requer autorização explícita e as duas imagens válidas.
+  const comparisonBefore = String(config.comparisonBeforeUrl || '').trim();
+  const comparisonAfter = String(config.comparisonAfterUrl || '').trim();
+  const isMediaUrl = (url) => /^(https?:\/\/|assets\/)/i.test(url);
+  if (comparison && config.comparisonAuthorized === true &&
+      isMediaUrl(comparisonBefore) && isMediaUrl(comparisonAfter)) {
+    const load = (url, alt) => new Promise((resolve, reject) => {
+      const img = document.createElement('img');
+      img.className = 'comparison-official-image';
+      img.alt = alt;
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error('Imagem não disponível'));
+      img.src = url;
+    });
+    Promise.all([
+      load(comparisonBefore, 'Fotografia de antes fornecida e autorizada pelo Studio'),
+      load(comparisonAfter, 'Fotografia de depois fornecida e autorizada pelo Studio')
+    ]).then(([beforeImg, afterImg]) => {
+      const beforePanel = comparison.querySelector('.comparison-before');
+      const afterPanel = comparison.querySelector('.comparison-after');
+      if (!beforePanel || !afterPanel) return;
+      beforePanel.prepend(beforeImg);
+      afterPanel.prepend(afterImg);
+      comparison.classList.add('has-official-comparison');
+      const intro = document.querySelector('.portfolio-intro>p');
+      const caution = document.querySelector('.comparison-caution');
+      if (intro) intro.textContent = 'Explore a comparação de antes e depois com fotografias autorizadas do Studio. Arraste o controle para observar os detalhes.';
+      if (caution) caution.textContent = 'Fotografias fornecidas e autorizadas pelo Studio. Resultados individuais podem variar e dependem de avaliação profissional.';
+    }).catch(() => { /* Mantém o comparador demonstrativo sem apresentar fotos incorretas. */ });
+  }
+
   // Vídeo opcional: ao incluir uma URL válida na configuração, substitui a foto da capa.
   const video = document.querySelector('.hero-video');
   const videoSource = typeof config.heroVideoUrl === 'string' ? config.heroVideoUrl.trim() : '';
