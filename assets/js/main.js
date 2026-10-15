@@ -72,22 +72,27 @@
 
   // Galeria com lightbox acessível, navegação por teclado e botão de fechar.
   const dialog = $('#gallery-lightbox');
-  const pictures = $$('.gallery-item img');
+  const galleryButtons = $$('.gallery-item');
   const dialogImage = $('.lightbox img');
   const count = $('.lightbox-counter');
   let activeIndex = 0;
   let lastTrigger = null;
+  const visibleGallery = () => galleryButtons.filter((button) => !button.hidden && getComputedStyle(button).display !== 'none');
   const setImage = (index) => {
-    if (!pictures.length || !dialogImage) return;
-    activeIndex = (index + pictures.length) % pictures.length;
-    const source = pictures[activeIndex];
+    const visible = visibleGallery();
+    if (!visible.length || !dialogImage) return;
+    activeIndex = (index + visible.length) % visible.length;
+    const source = $('img', visible[activeIndex]);
+    if (!source) return;
     dialogImage.src = source.currentSrc || source.src;
     dialogImage.alt = source.alt;
-    if (count) count.textContent = `${activeIndex + 1} / ${pictures.length}`;
+    if (count) count.textContent = `${activeIndex + 1} / ${visible.length}`;
   };
-  $$('.gallery-item').forEach((button, index) => {
+  galleryButtons.forEach((button) => {
     button.addEventListener('click', () => {
-      if (!dialog?.showModal) return;
+      if (!dialog?.showModal || button.hidden) return;
+      const index = visibleGallery().indexOf(button);
+      if (index < 0) return;
       lastTrigger = button;
       setImage(index);
       dialog.showModal();
