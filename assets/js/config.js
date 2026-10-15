@@ -3,6 +3,10 @@ window.STUDIO_CONFIG = {
   name: 'Studio Gabi Lima',
   whatsapp: '5511945107378',
   whatsappMessage: 'Olá! Conheci o Studio Gabi Lima pelo site e gostaria de consultar os horários para agendamento.',
+  // Mídias oficiais opcionais: manter vazio até receber autorização da cliente.
+  // Exemplo local: 'assets/img/gabi-lima-oficial.jpg' ou 'assets/video/studio.mp4'
+  founderPhotoUrl: '',
+  heroVideoUrl: '',
   instagram: 'https://www.instagram.com/studiogabilimaa/',
   email: 'studiogabrielaalima@gmail.com',
   address: 'Rua João Calegari, 145, Itu, São Paulo',
