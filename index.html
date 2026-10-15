@@ -7,6 +7,7 @@
   <meta name="description" content="Studio Gabi Lima em Itu/SP. Especialista em alisamentos, progressivas orgânicas, mega hair, cortes, mechas e beleza completa. Fale com nossa equipe e agende seu horário.">
   <meta name="format-detection" content="telephone=no">
   <meta property="og:type" content="website">
+  <meta name="robots" content="index,follow">
   <meta property="og:title" content="Studio Gabi Lima — Beleza com assinatura">
   <meta property="og:description" content="Alisamentos, mega hair, mechas e beleza em Itu/SP. Conheça o Studio Gabi Lima.">
   <meta property="og:locale" content="pt_BR">
@@ -20,9 +21,11 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/gold-ice.css">
   <link rel="stylesheet" href="assets/css/signature.css">
+  <link rel="stylesheet" href="assets/css/atelier.css">
   <script src="assets/js/config.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/concierge.js" defer></script>
+  <script src="assets/js/atelier.js" defer></script>
   <script type="application/ld+json" id="business-schema">
   {
     "@context": "https://schema.org",
@@ -43,6 +46,7 @@
   </div>
 
   <header class="site-header" id="topo">
+    <div class="reading-progress" aria-hidden="true"></div>
     <div class="container nav-shell">
       <a class="brand" href="#inicio" aria-label="Studio Gabi Lima — ir para o início">
         <img src="assets/img/logo-provisoria.svg" alt="Monograma provisório do Studio Gabi Lima" width="52" height="52">
@@ -79,9 +83,10 @@
         <div class="hero-vertical" aria-hidden="true">BEAUTY IS PERSONAL — STUDIO GABI LIMA</div>
       </div>
       <div class="hero-photo-wrap">
+        <video class="hero-video" muted playsinline loop autoplay preload="none" aria-hidden="true" hidden></video>
         <div class="hero-photo" role="img" aria-label="Imagem ilustrativa de beleza e cabelos com acabamento sofisticado"></div>
         <div class="hero-photo-shade" aria-hidden="true"></div>
-        <div class="hero-photo-top"><span>GABI LIMA</span><span>BELEZA COM IDENTIDADE</span></div>
+        <div class="hero-photo-top"><span>GABI LIMA / ATELIER</span><span>BELEZA COM IDENTIDADE</span></div>
         <div class="hero-photo-bottom"><span class="hero-gold-ring" aria-hidden="true">✦</span><div><span class="hero-photo-label">STUDIO GABI LIMA · ITU / SP</span><strong>É o que revela quem você é.</strong></div></div>
         <span class="photo-disclaimer">Foto ilustrativa</span>
       </div>
@@ -105,7 +110,30 @@
           <p class="section-lead">A beleza é única. A experiência também deve ser.</p>
           <p>À frente do Studio, Gabi Lima une técnica capilar, sensibilidade e atenção aos detalhes para criar experiências de beleza personalizadas. Um espaço para quem busca um resultado especial e valoriza o cuidado em cada etapa.</p>
           <div class="about-quote"><span>“</span><p>Mais do que transformar cabelos, queremos valorizar histórias e realçar individualidades.</p></div>
+          <a class="founder-discover" href="#gabi" aria-label="Conhecer Gabi Lima">Conheça quem assina cada detalhe <span aria-hidden="true">↓</span></a>
           <a class="text-arrow-link" data-instagram href="https://www.instagram.com/studiogabilimaa/" target="_blank" rel="noopener noreferrer">Conheça mais no Instagram <span class="inline-link-icon" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="founder-section" id="gabi" aria-labelledby="founder-title">
+      <div class="container founder-layout">
+        <div class="founder-copy reveal">
+          <div class="founder-eyebrow"><span class="founder-line" aria-hidden="true"></span> POR TRÁS DO STUDIO</div>
+          <h2 id="founder-title">A beleza tem <em>um nome.</em></h2>
+          <div class="founder-script" aria-hidden="true">Gabi Lima.</div>
+          <p class="founder-lead">Técnica, identidade e o cuidado de quem entende que cada cabelo conta uma história.</p>
+          <p>Gabi Lima está à frente do Studio Gabriela Lima, em Itu. Com destaque em alisamentos e progressivas, seu trabalho reúne conhecimento capilar, atenção individualizada e paixão por transformar a experiência de beleza.</p>
+          <div class="founder-specialties" aria-label="Especialidades de Gabi Lima"><span>ALISAMENTOS</span><span>MEGA HAIR</span><span>BELEZA PERSONALIZADA</span></div>
+          <a class="founder-link" data-instagram href="https://www.instagram.com/studiogabilimaa/" target="_blank" rel="noopener noreferrer">Acompanhar Gabi no Instagram <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></a>
+        </div>
+        <div class="founder-visual reveal">
+          <div class="founder-photo-placeholder" role="img" aria-label="Espaço reservado para uma fotografia oficial autorizada de Gabi Lima">
+            <div class="founder-photo-art" aria-hidden="true"><span class="founder-portrait-frame"></span><span class="founder-art-monogram">GL</span><span class="founder-art-script">Gabriela Lima</span></div>
+            <div class="founder-photo-note"><span class="founder-note-star" aria-hidden="true">✧</span><strong>Uma história por trás de cada transformação.</strong><small>Espaço reservado para retrato oficial da Gabi Lima</small></div>
+          </div>
+          <span class="founder-visual-side" aria-hidden="true">PERSONAL BEAUTY · ITU SP</span>
         </div>
       </div>
     </section>
@@ -139,16 +167,34 @@
       <div class="feature-copy"><div class="feature-copy-inner reveal"><span class="eyebrow light-eyebrow">NOSSA ESPECIALIDADE</span><span class="feature-marker">ASSINATURA GABI LIMA</span><h2 id="feature-title">O brilho que você vê. <em>O cuidado que você sente.</em></h2><p>Em alisamentos e progressivas orgânicas, técnica e conhecimento fazem toda a diferença. Conheça as possibilidades para os seus fios em uma avaliação individualizada.</p><div class="feature-tags"><span>ALISAMENTOS</span><span>PROGRESSIVAS ORGÂNICAS</span><span>BRILHO 3D</span></div><a class="button button-outline" data-service-whatsapp="Alisamentos e progressivas" href="https://wa.me/5511945107378" target="_blank" rel="noopener noreferrer">Quero saber mais <span class="button-arrow" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a></div></div>
     </section>
 
-    <section class="section gallery-section" id="inspiracoes">
-      <div class="container gallery-heading reveal"><div><span class="eyebrow dark-eyebrow"><span class="line"></span> INSPIRAÇÕES</span><h2 class="section-title">Para imaginar seu <em>próximo visual.</em></h2></div><div class="gallery-heading-right"><p>Inspire-se em texturas, movimentos e possibilidades. Seu próximo capítulo pode começar aqui.</p><a class="text-arrow-link" data-instagram href="https://www.instagram.com/studiogabilimaa/" target="_blank" rel="noopener noreferrer">Acompanhe o Studio <span class="inline-link-icon" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a></div></div>
-      <div class="gallery-grid" aria-label="Galeria de referências de beleza">
-        <button class="gallery-item gallery-item-large reveal" type="button" data-gallery="0" aria-label="Ampliar referência ilustrativa de cabelos"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=950&q=80" loading="lazy" alt="Retrato de beleza — imagem ilustrativa"><span class="gallery-overlay"><span>TEXTURAS</span><strong>A beleza do movimento</strong><span class="gallery-expand" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
-        <button class="gallery-item reveal" type="button" data-gallery="1" aria-label="Ampliar inspiração para cabelos"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=750&q=80" loading="lazy" alt="Retrato de cabelo longo — imagem ilustrativa"><span class="gallery-overlay"><span>IDENTIDADE</span><strong>Beleza natural</strong><span class="gallery-expand" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
-        <button class="gallery-item reveal" type="button" data-gallery="2" aria-label="Ampliar referência de beleza"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=750&q=80" loading="lazy" alt="Retrato de beleza — imagem ilustrativa"><span class="gallery-overlay"><span>ATITUDE</span><strong>Seu jeito de brilhar</strong><span class="gallery-expand" aria-hidden="true"><svg class="icon-arrow-up-right" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
+    <section class="section gallery-section" id="inspiracoes" aria-labelledby="gallery-title">
+      <div class="container gallery-heading reveal"><div><span class="eyebrow dark-eyebrow"><span class="line"></span> REFERÊNCIAS &amp; INSPIRAÇÃO</span><h2 class="section-title" id="gallery-title">O próximo capítulo <em>do seu visual.</em></h2></div><div class="gallery-heading-right"><p>Explore possibilidades de estilo. As imagens são apenas referências visuais e não representam procedimentos realizados pelo Studio.</p><a class="text-arrow-link" data-instagram href="https://www.instagram.com/studiogabilimaa/" target="_blank" rel="noopener noreferrer">Ver novidades no Instagram <span class="inline-link-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></span></a></div></div>
+      <div class="container portfolio-tools reveal" role="group" aria-label="Filtrar referências por serviço"><span class="portfolio-tools-label">EXPLORE POR INTERESSE</span><div class="portfolio-filters">
+        <button type="button" class="portfolio-filter is-active" data-filter="todos" aria-pressed="true">Todos</button>
+        <button type="button" class="portfolio-filter" data-filter="alisamentos" aria-pressed="false">Alisamentos</button>
+        <button type="button" class="portfolio-filter" data-filter="mega-hair" aria-pressed="false">Mega Hair</button>
+        <button type="button" class="portfolio-filter" data-filter="mechas" aria-pressed="false">Mechas</button>
+        <button type="button" class="portfolio-filter" data-filter="cortes" aria-pressed="false">Cortes</button>
+      </div><span class="portfolio-count" aria-live="polite">4 referências</span></div>
+      <div class="gallery-grid gallery-grid-refined" aria-label="Galeria de referências ilustrativas de beleza">
+        <button class="gallery-item gallery-item-large reveal" type="button" data-gallery="0" data-category="alisamentos" aria-label="Ampliar referência ilustrativa: Beleza em movimento"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="Retrato de beleza com cabelos em destaque, imagem ilustrativa"><span class="gallery-overlay"><span>TEXTURAS · REFERÊNCIA</span><strong>Beleza em movimento</strong><span class="gallery-expand" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
+        <button class="gallery-item reveal" type="button" data-gallery="1" data-category="mega-hair" aria-label="Ampliar referência ilustrativa: Novas possibilidades"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Retrato ilustrativo com cabelos longos, não é trabalho do Studio"><span class="gallery-overlay"><span>COMPRIMENTO · REFERÊNCIA</span><strong>Novas possibilidades</strong><span class="gallery-expand" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
+        <button class="gallery-item reveal" type="button" data-gallery="2" data-category="mechas" aria-label="Ampliar referência ilustrativa: Luz que valoriza"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Retrato de referência de beleza, imagem ilustrativa"><span class="gallery-overlay"><span>LUZ · REFERÊNCIA</span><strong>Luz que valoriza</strong><span class="gallery-expand" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
+        <button class="gallery-item reveal" type="button" data-gallery="3" data-category="cortes" aria-label="Ampliar referência ilustrativa: Estilo com identidade"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Retrato ilustrativo de cabelo e estilo, não é trabalho do Studio"><span class="gallery-overlay"><span>EXPRESSÃO · REFERÊNCIA</span><strong>Estilo com identidade</strong><span class="gallery-expand" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></span></span></button>
       </div>
-      <div class="container gallery-footer"><p><span aria-hidden="true">ⓘ</span> Fotografias ilustrativas para apresentação do projeto. O portfólio oficial será inserido com imagens autorizadas do Studio.</p><span>STUDIO GABI LIMA / INSPIRAÇÕES</span></div>
+      <div class="container gallery-footer"><p><span aria-hidden="true">ⓘ</span> Fotografias ilustrativas, sem vínculo com resultados do Studio. A galeria está preparada para receber o portfólio real mediante autorização.</p><span>GABI LIMA / VISUAL EDITORIAL</span></div>
+      <div class="container portfolio-intro"><div><span>FUTURO PORTFÓLIO</span><h3>Transformações reais merecem <em>ser vistas.</em></h3></div><p>O espaço abaixo já permite comparar duas imagens. Por enquanto, apresenta somente um modelo gráfico, até termos fotos oficiais de antes e depois.</p></div>
+      <div class="container comparison-layout">
+        <div class="comparison-widget" data-comparison style="--compare:50%">
+          <div class="comparison-side comparison-before"><span class="compare-caption">ANTES</span><span class="compare-art" aria-hidden="true">GL</span><div class="comparison-overlay-text">Fotografia original<br>aguardando envio</div></div>
+          <div class="comparison-side comparison-after"><span class="compare-caption">DEPOIS</span><span class="compare-art" aria-hidden="true">GL</span><div class="comparison-overlay-text">Resultado real<br>aguardando envio</div></div>
+          <span class="comparison-divider" aria-hidden="true"><span class="comparison-handle">‹ ›</span></span>
+          <input class="comparison-range" type="range" min="0" max="100" value="50" step="1" aria-label="Arrastar para comparar o espaço reservado às fotografias de antes e depois">
+          <span class="comparison-demo" aria-hidden="true">DEMONSTRAÇÃO DO COMPONENTE</span>
+        </div>
+        <div class="comparison-copy"><span class="comparison-label">A ARTE DA TRANSFORMAÇÃO</span><h3>O resultado fala <em>por si.</em></h3><p>Um comparativo pensado para evidenciar detalhes de uma transformação capilar, com imagens reais tiradas nas mesmas condições, quando a Gabi disponibilizar os registros autorizados.</p><p class="comparison-caution">Modelo visual sem fotos ou resultados de clientes. Nenhuma transformação está sendo afirmada nesta demonstração.</p><a class="comparison-contact" data-whatsapp href="https://wa.me/5511945107378" target="_blank" rel="noopener noreferrer">Quero conversar sobre meu cabelo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M8 5h11v11"/></svg></a></div>
+      </div>
     </section>
-
 
     <!-- Seleção personalizada sem coleta de dados ou formulário: a conversa continua pelo WhatsApp. -->
     <section class="curadoria-section" id="seu-momento" aria-labelledby="curadoria-title">
@@ -193,6 +239,6 @@
   <footer class="site-footer"><div class="container"><div class="footer-main"><div class="footer-brand"><a class="brand footer-brand-link" href="#inicio" aria-label="Voltar ao início"><img src="assets/img/logo-provisoria.svg" alt="Monograma provisório" width="52" height="52"><span class="brand-words"><span>STUDIO <strong>GABI LIMA</strong></span><small>HAIR & BEAUTY</small></span></a><p>Beleza, técnica e experiências que valorizam a sua essência.</p></div><div class="footer-column"><h3>EXPLORE</h3><a href="#sobre">O Studio</a><a href="#especialidades">Especialidades</a><a href="#inspiracoes">Inspirações</a><a href="#duvidas">Dúvidas frequentes</a></div><div class="footer-column"><h3>FALE CONOSCO</h3><a data-whatsapp href="https://wa.me/5511945107378" target="_blank" rel="noopener noreferrer">WhatsApp</a><a data-instagram href="https://www.instagram.com/studiogabilimaa/" target="_blank" rel="noopener noreferrer">@studiogabilimaa</a><a href="mailto:studiogabrielaalima@gmail.com">studiogabrielaalima@gmail.com</a><span>Itu / São Paulo</span></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Studio Gabi Lima. Todos os direitos reservados.</span><span>FEITO COM ELEGÂNCIA. PENSADO PARA VOCÊ.</span><a href="#topo">Voltar ao topo ↑</a></div></div></footer>
 
   <a class="floating-whatsapp" data-whatsapp href="https://wa.me/5511945107378" target="_blank" rel="noopener noreferrer" aria-label="Agendar horário no WhatsApp"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.7 8.6 9.3 9.3 0 0 1-3.8-.8L3 21l1.7-5.2a8.7 8.7 0 0 1-.9-3.9A8.7 8.7 0 1 1 21 11.5Z"/><path d="M8.9 8.6c-.3-.4-.6-.4-.9-.4s-.7.1-1 .5c-.4.4-.8 1-.8 2.1s.8 2.2 1 2.4c.2.2 1.6 2.6 4 3.5 2 .8 2.4.6 2.9.5.5-.1 1.5-.7 1.7-1.3.2-.6.2-1.1.1-1.2-.1-.1-.5-.3-1-.5s-1-.5-1.2-.6c-.2-.1-.4-.2-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.7 0-.4-.2-1.5-.6-2.8-1.9-1-1-1.7-2.1-1.9-2.5-.2-.4 0-.5.1-.7.2-.2.4-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4-.1-.6-.1-.2-.7-1.7-.8-1.9Z"/></svg><span>Agende aqui</span></a>
-  <dialog class="lightbox" id="gallery-lightbox" aria-label="Visualização ampliada de uma inspiração"><button class="lightbox-close" aria-label="Fechar imagem" type="button"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M5 5 19 19M19 5 5 19"/></svg></button><img src="" alt="Imagem de inspiração ampliada"><span class="lightbox-caption">Imagem ilustrativa</span><div class="lightbox-navigation"><button type="button" class="lightbox-prev" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button><span class="lightbox-counter">1 / 3</span><button type="button" class="lightbox-next" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></dialog>
+  <dialog class="lightbox" id="gallery-lightbox" aria-label="Visualização ampliada de uma inspiração"><button class="lightbox-close" aria-label="Fechar imagem" type="button"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M5 5 19 19M19 5 5 19"/></svg></button><img src="" alt="Imagem de inspiração ampliada"><span class="lightbox-caption">Imagem ilustrativa</span><div class="lightbox-navigation"><button type="button" class="lightbox-prev" aria-label="Imagem anterior"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg></button><span class="lightbox-counter">1 / 4</span><button type="button" class="lightbox-next" aria-label="Próxima imagem"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></dialog>
 </body>
 </html>
