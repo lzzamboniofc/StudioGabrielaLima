@@ -395,3 +395,29 @@
   .reading-progress {will-change:auto}
   .gallery-grid.gallery-grid-refined {scroll-behavior:auto}
 }
+
+
+/* Substituição controlada por fotos oficiais no comparador. */
+.comparison-official-image {
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;display:block;z-index:0;
+}
+.comparison-side .compare-caption {z-index:2}
+.comparison-widget.has-official-comparison .compare-art,
+.comparison-widget.has-official-comparison .comparison-overlay-text,
+.comparison-widget.has-official-comparison .comparison-demo {display:none}
+.comparison-widget.has-official-comparison .comparison-before:after,
+.comparison-widget.has-official-comparison .comparison-after:after {
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(0deg,rgba(0,0,0,.15),transparent 35%);
+}
+.comparison-widget.has-official-comparison .comparison-after:after {
+  background:linear-gradient(0deg,rgba(0,0,0,.05),transparent 35%);
+}
+@media(min-width:1041px) and (max-width:1250px) {
+  .desktop-nav {gap:clamp(11px,1.4vw,19px)}
+  .desktop-nav a {font-size:10px}
+  .brand {gap:9px}
+  .brand-words>span {font-size:13px}
+  .header-book {font-size:9px;padding-inline:11px;gap:6px}
+}
