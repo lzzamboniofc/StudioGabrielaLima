@@ -7,6 +7,10 @@ window.STUDIO_CONFIG = {
   // Exemplo local: 'assets/img/gabi-lima-oficial.jpg' ou 'assets/video/studio.mp4'
   founderPhotoUrl: '',
   heroVideoUrl: '',
+  // Antes/depois: só ativar quando HOUVER duas fotos do mesmo atendimento com autorização.
+  comparisonAuthorized: false,
+  comparisonBeforeUrl: '',
+  comparisonAfterUrl: '',
   instagram: 'https://www.instagram.com/studiogabilimaa/',
   email: 'studiogabrielaalima@gmail.com',
   address: 'Rua João Calegari, 145, Itu, São Paulo',
