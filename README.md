@@ -31,6 +31,8 @@ O GitHub Pages é estático, portanto não executa `server.js`, mas todos os arq
 - `index.html` — todo o conteúdo institucional, links, dados estruturados para buscadores e componentes visuais.
 - `assets/css/styles.css` — layout responsivo e animações originais.
 - `assets/css/gold-ice.css` — folha complementar de identidade visual Preto, Branco & Dourado, tipografia editorial, cards de serviços e refinamentos responsivos (nome preservado para não quebrar referências).
+- `assets/css/signature.css` — acabamento editorial exclusivo, seções pretas, destaque da especialidade, nova seção "Seu momento" e ajustes mobile.
+- `assets/js/concierge.js` — seletor de intenções do visitante, com mensagens contextualizadas para WhatsApp (sem banco de dados nem coleta de informações).
 - `assets/js/config.js` — WhatsApp, Instagram, mensagens por serviço, endereço e rota.
 - `assets/js/main.js` — menu mobile, animações, navegação, WhatsApp contextual e galeria ampliada.
 - `assets/img/logo-provisoria.svg` — monograma TEMPORÁRIO (trocar pela logo da cliente).
@@ -52,7 +54,7 @@ O GitHub Pages é estático, portanto não executa `server.js`, mas todos os arq
 - Responsivo (desktop, tablet e celular) com menu expansível acessível.
 - Visual premium Ouro & Gelo, tipografia editorial Cormorant Garamond e componentes próprios, com transições e animações moderadas.
 - Serviços com mensagens de WhatsApp específicas.
-- Apresentação do Studio, reconhecimento, serviços, inspirações, etapas do atendimento e perguntas frequentes.
+- Apresentação do Studio, reconhecimento, serviços, inspirações, etapas do atendimento, seção interativa de objetivos e perguntas frequentes.
 - Lightbox na galeria, com navegação por setas e teclado.
 - CTA flutuante de WhatsApp, links para Instagram, mapa, telefone e email.
 - Dados estruturados `BeautySalon`, descrição SEO, sem dados de avaliação inventados.
@@ -81,3 +83,15 @@ A paleta está concentrada em `assets/css/gold-ice.css`, carregado após a folha
 - ícones de expansão do FAQ construídos em CSS, centralizados e alternando de `+` para `−` sem rotação.
 
 Não foram incluídos resultados ou depoimentos inventados; fotografias atuais continuam ilustrativas e devem ser trocadas por fotos autorizadas antes do lançamento comercial.
+
+## Signature Edition — aprimoramento visual e comercial
+
+A nova identidade alterna **preto, branco e dourado** ao longo das seções para criar mais ritmo visual. As áreas de reconhecimento, especialidade, seleção do cuidado e convite final têm fundo preto; as áreas de apresentação, serviços, inspirações, experiência e FAQ ficam claras. O card de alisamentos foi destacado como especialidade principal.
+
+### Seção "Seu momento"
+
+A visitante pode selecionar um objetivo (brilho/alinhamento, comprimento/volume, mechas/iluminação ou corte), visualizar uma sugestão de serviço e iniciar uma conversa por WhatsApp com **mensagem já contextualizada**. A seção não é um diagnóstico capilar, não exibe preços inventados e não coleta ou armazena dados. A definição do procedimento depende de avaliação profissional.
+
+Para alterar as opções, editar `assets/js/concierge.js` e os botões `data-curadoria` de `index.html`. A interação utiliza o WhatsApp informado em `assets/js/config.js`.
+
+A identidade personalizada continua **provisória** até o envio da logo oficial e das fotos autorizadas da empresa.
