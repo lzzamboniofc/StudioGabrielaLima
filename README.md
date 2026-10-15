@@ -1,6 +1,6 @@
 # Studio Gabi Lima — Site institucional
 
-Protótipo comercial **independente** criado para o Studio Gabi Lima (Studio Gabriela Lima), salão de beleza em Itu/SP. Visual editorial premium na identidade **Ouro & Gelo**: gelo perolado, branco frio, dourado champagne e grafite azulado. Inspirado na organização do projeto Espaço Sol, com identidade visual e código próprios.
+Protótipo comercial **independente** criado para o Studio Gabi Lima (Studio Gabriela Lima), salão de beleza em Itu/SP. Visual editorial premium na identidade **Preto, Branco & Dourado**: fundos brancos, áreas escuras em preto e detalhes dourados. Inspirado na organização do projeto Espaço Sol, com identidade visual e código próprios.
 
 > **Atenção antes de apresentar ou publicar como site oficial:** a marca e as fotos definitivas ainda não foram enviadas. O monograma GL é provisório; fotos e composições atuais são **ilustrativas, não representam trabalhos realizados pelo Studio**. Confirme textos promocionais e serviços com a proprietária antes da entrega.
 
@@ -30,7 +30,7 @@ O GitHub Pages é estático, portanto não executa `server.js`, mas todos os arq
 
 - `index.html` — todo o conteúdo institucional, links, dados estruturados para buscadores e componentes visuais.
 - `assets/css/styles.css` — layout responsivo e animações originais.
-- `assets/css/gold-ice.css` — identidade Ouro & Gelo: cores, tipografia editorial, cards de serviços e refinamentos responsivos.
+- `assets/css/gold-ice.css` — folha complementar de identidade visual Preto, Branco & Dourado, tipografia editorial, cards de serviços e refinamentos responsivos (nome preservado para não quebrar referências).
 - `assets/js/config.js` — WhatsApp, Instagram, mensagens por serviço, endereço e rota.
 - `assets/js/main.js` — menu mobile, animações, navegação, WhatsApp contextual e galeria ampliada.
 - `assets/img/logo-provisoria.svg` — monograma TEMPORÁRIO (trocar pela logo da cliente).
@@ -69,14 +69,15 @@ WhatsApp: **(11) 94510-7378** · Email: **studiogabrielaalima@gmail.com** · Ins
 
 O protótipo é um ponto de partida para apresentação e negociação, não uma confirmação de associação oficial com o estabelecimento. Antes da publicação definitiva, obtenha aprovação da identidade visual, imagem, descrições de serviços e informações comerciais.
 
-## Identidade Ouro & Gelo (versão 2)
+## Identidade Preto, Branco & Dourado (versão 3)
 
-A paleta está concentrada em `assets/css/gold-ice.css`, que é carregado após a folha de estilos base e pode ser substituído sem reescrever o site.
+A paleta está concentrada em `assets/css/gold-ice.css`, carregado após a folha de estilos base, sem necessidade de reescrever o site. O nome do arquivo foi mantido por compatibilidade.
 
-- Gelo perolado `#EDF3F4` e branco frio `#FBFDFC` para áreas amplas;
+- Branco `#FFFFFF` e branco levemente acinzentado `#F7F7F7` para áreas amplas;
 - ouro champagne `#AC8040` e dourado claro `#DDBE86` para elementos de assinatura;
-- grafite azulado `#263235` para títulos, navegação e contraste;
+- Preto `#111111` e cinza neutro para títulos, navegação e contraste;
 - serviços em cards editoriais, bordas finas, detalhes metalizados e espaços mais leves;
-- marca GL e favicon ainda **provisórios**, não substituem a logo oficial.
+- marca GL e favicon ainda **provisórios**, não substituem a logo oficial;
+- ícones de expansão do FAQ construídos em CSS, centralizados e alternando de `+` para `−` sem rotação.
 
 Não foram incluídos resultados ou depoimentos inventados; fotografias atuais continuam ilustrativas e devem ser trocadas por fotos autorizadas antes do lançamento comercial.
