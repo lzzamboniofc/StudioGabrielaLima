@@ -384,3 +384,34 @@ body {background:var(--ice);color:var(--ink)}
   .service-action svg {width:18px;height:18px}
   .gallery-expand svg {width:15px;height:15px}
 }
+
+
+/* Setas de links de texto e menu: mesma caixa e alinhamento dos CTAs. */
+.text-arrow-link,.underlined-link,.mobile-menu-cta {align-items:center}
+.underlined-link {display:inline-flex;align-items:center;gap:7px}
+.inline-link-icon,.mobile-link-icon {
+  display:inline-grid;
+  place-items:center;
+  vertical-align:middle;
+  flex:0 0 20px;
+  width:20px;
+  height:20px;
+  margin:0;
+  padding:0;
+  line-height:1;
+}
+.inline-link-icon svg,.mobile-link-icon svg {
+  display:block;
+  width:18px;
+  height:18px;
+  margin:0;
+  padding:0;
+}
+.underlined-link .inline-link-icon {padding:0}
+.text-arrow-link .inline-link-icon {color:#ae8349}
+.mobile-menu-cta .mobile-link-icon {color:#f2d6a6}
+@media(max-width:450px) {
+  .underlined-link {gap:6px}
+  .inline-link-icon,.mobile-link-icon {width:18px;height:18px;flex-basis:18px}
+  .inline-link-icon svg,.mobile-link-icon svg {width:17px;height:17px}
+}
