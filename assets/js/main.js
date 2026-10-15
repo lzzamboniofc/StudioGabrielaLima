@@ -25,14 +25,13 @@
     document.body.classList.toggle('menu-open', open);
   };
   toggle?.addEventListener('click', () => setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-  $('#mobile-menu a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+  document.querySelectorAll('#mobile-menu a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
   // Mantém navegação por teclado acessível quando o menu responsivo está aberto.
-  mobileNav?.addEventListener('keydown', (event) => {
-    if (event.key !== 'Tab' || !mobileNav.classList.contains('open')) return;
-    const focusables = [toggle, ...$('a[href]', mobileNav)].filter(Boolean);
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab' || !mobileNav?.classList.contains('open')) return;
+    const focusables = [toggle, ...mobileNav.querySelectorAll('a[href]')].filter(Boolean);
     if (!focusables.length) return;
-    const first = focusables[0];
-    const last = focusables[focusables.length - 1];
+    const first = focusables[0], last = focusables[focusables.length - 1];
     if (event.shiftKey && document.activeElement === first) {
       event.preventDefault(); last.focus();
     } else if (!event.shiftKey && document.activeElement === last) {
@@ -115,6 +114,20 @@
       setImage(index);
       dialog.showModal();
       document.body.classList.add('dialog-open');
+    });
+    button.addEventListener('keydown', (event) => {
+      if (dialog?.open || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+      const visible = visibleGallery();
+      const position = visible.indexOf(button);
+      if (position < 0 || visible.length < 2) return;
+      event.preventDefault();
+      const delta = event.key === 'ArrowRight' ? 1 : -1;
+      const target = visible[(position + delta + visible.length) % visible.length];
+      target.focus();
+      target.scrollIntoView({
+        block: 'nearest', inline: 'nearest',
+        behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
+      });
     });
   });
   const closeLightbox = () => { if (dialog?.open) dialog.close(); };
