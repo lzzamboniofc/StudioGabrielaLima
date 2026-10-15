@@ -135,3 +135,22 @@ A logo GL continua **provisória** até receber a identidade oficial dourada da 
 O dourado recebeu novos tons: base `#C89A4B`, destaque `#E2BE7A` e brilho `#F3D79C`. Os ajustes estão no final de `assets/css/atelier.css` (seção "BRILHO CHAMPAGNE"), mantendo a base preta e branca. Algumas aplicações sobre fundos brancos permanecem com dourado mais escuro para assegurar legibilidade.
 
 O botão flutuante **“Agende aqui”** usa agora um ícone SVG de calendário com confirmação, centralizado em uma medalha circular. O botão continua abrindo o WhatsApp configurado em `assets/js/config.js`, sem criar agendamento automático. Monograma provisório e favicon foram harmonizados à nova paleta.
+
+## Auditoria de responsividade — outubro de 2026
+
+O projeto foi construído originalmente com regras *desktop-first* (ajustes condicionais para telas menores). A revisão posterior **priorizou a experiência mobile**, sem reescrever o layout inteiro nem alterar o design aprovado.
+
+### Ajustes aplicados
+
+- Prevenção de overflow horizontal e controle de largura para elementos, containers e textos.
+- Escala tipográfica responsiva e espaçamento ajustado em smartphones compactos (a partir de 320 px), tablets e orientação paisagem.
+- Menu móvel limitado à altura do viewport, rolável em telas curtas e com retorno de foco ao pressionar Escape; laço de navegação por Tab enquanto aberto.
+- Alvos maiores para toque nos filtros da galeria, no lightbox e nos principais botões de serviço.
+- Galeria com rolagem horizontal controlada, cartão ativo navegável por setas do teclado e foco visível.
+- Comparador de antes/depois com largura flexível e manipulação por toque.
+- Botão flutuante ocultado visualmente quando o menu ou o lightbox estiver aberto, reduzindo sobreposição.
+- Imagens de fundo menores no mobile; remoção de fontes que não são utilizadas.
+
+**Verificações manuais recomendadas antes da venda:** abrir em um navegador real ou em modo responsivo nas larguras 320, 360, 375, 390, 430, 540, 768 e 1024 px, incluindo orientação paisagem; confirmar abertura/fechamento do menu, clique do WhatsApp, filtros, gestos do carrossel, slider de comparação, FAQ, localização, acessibilidade por teclado e ausência de rolagem lateral. A checagem automatizada da estrutura do código não substitui essa validação visual em dispositivos.
+
+Para manter o acabamento, as regras desta revisão estão ao final de `assets/css/atelier.css` no bloco "REVISÃO RESPONSIVA / MOBILE-FIRST EXPERIENCE". As regras antigas permanecem como base para preservar a versão desktop.
