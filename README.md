@@ -129,3 +129,9 @@ O comparador exige `comparisonAuthorized: true` **e as duas fotografias**. Até 
 A galeria utiliza imagens de referência ilustrativas externas. Para lançar comercialmente, substitua as fontes dos `<img>` da seção `#inspiracoes` por fotos oficiais e autorizadas; revise legendas, textos e avisos. A propriedade `data-category` controla os filtros. Não associe fotografias de bancos de imagens a resultados de procedimentos.
 
 A logo GL continua **provisória** até receber a identidade oficial dourada da cliente. Ainda não foram fornecidos vídeos, retrato ou fotos reais de transformação. Todas as áreas novas foram desenhadas para funcionar sem esses itens, com ressalvas transparentes.
+
+## Acabamento de identidade — dourado champagne luminoso
+
+O dourado recebeu novos tons: base `#C89A4B`, destaque `#E2BE7A` e brilho `#F3D79C`. Os ajustes estão no final de `assets/css/atelier.css` (seção "BRILHO CHAMPAGNE"), mantendo a base preta e branca. Algumas aplicações sobre fundos brancos permanecem com dourado mais escuro para assegurar legibilidade.
+
+O botão flutuante **“Agende aqui”** usa agora um ícone SVG de calendário com confirmação, centralizado em uma medalha circular. O botão continua abrindo o WhatsApp configurado em `assets/js/config.js`, sem criar agendamento automático. Monograma provisório e favicon foram harmonizados à nova paleta.
