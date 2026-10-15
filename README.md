@@ -95,3 +95,37 @@ A visitante pode selecionar um objetivo (brilho/alinhamento, comprimento/volume,
 Para alterar as opções, editar `assets/js/concierge.js` e os botões `data-curadoria` de `index.html`. A interação utiliza o WhatsApp informado em `assets/js/config.js`.
 
 A identidade personalizada continua **provisória** até o envio da logo oficial e das fotos autorizadas da empresa.
+
+## Atelier Edition — aprimoramento visual e de navegação
+
+A nova camada `assets/css/atelier.css` e o script `assets/js/atelier.js` acrescentam, preservando o design preto/branco/dourado:
+
+- **Marca GL autoral:** identidade editorial refinada, detalhes dourados e hierarquia visual mais forte;
+- **Hero cinematográfica:** entradas suaves, detalhes interativos para mouse, barra de progresso de leitura e suporte opcional a vídeo oficial;
+- **Apresentação da Gabi:** nova seção pessoal com monograma e espaço reservado para retrato profissional;
+- **Galeria filtrável:** imagens ilustrativas organizadas nas categorias Alisamentos, Mega Hair, Mechas e Cortes; filtro acessível e lightbox integrado;
+- **Comparador de antes/depois:** controle deslizante funcional, inicialmente com **placeholders gráficos**, sem inventar resultados;
+- **Mobile refinado:** galeria horizontal com toque, melhor hierarquia da seção pessoal, botões de agendamento e tamanhos adaptados;
+- **Acessibilidade:** suporte a teclado, teclado na galeria, `prefers-reduced-motion`, indicadores e rótulos apropriados.
+
+### Substituir conteúdo provisório por material autorizado
+
+Todos os controles opcionais ficam em `assets/js/config.js`:
+
+```js
+founderPhotoUrl: '',          // Exemplo: 'assets/img/gabi-lima.jpg'
+heroVideoUrl: '',             // Exemplo: 'assets/video/studio.mp4'
+comparisonAuthorized: false,  // Só ativar com autorização explícita
+comparisonBeforeUrl: '',      // Exemplo: 'assets/img/antes.jpg'
+comparisonAfterUrl: '',       // Exemplo: 'assets/img/depois.jpg'
+```
+
+Ao preencher `founderPhotoUrl`, a foto substitui a composição provisória da seção da Gabi. Sem foto, o monograma editorial permanece.
+
+Ao preencher `heroVideoUrl`, o vídeo aparece sobre a imagem de fundo. O vídeo deve ser **silencioso, otimizado, curto e autorizado**. Se não houver vídeo ou se a reprodução falhar, a foto ilustrativa da capa permanece. Pessoas com redução de movimento ativada não recebem reprodução automática.
+
+O comparador exige `comparisonAuthorized: true` **e as duas fotografias**. Até lá, só mostra um modelo gráfico e não afirma nenhum resultado. Depois de carregar ambas, troca automaticamente os placeholders pelas fotos. Use registros reais **do mesmo atendimento**, feitos com condições de iluminação e ângulo similares, e obtenha consentimento do cliente.
+
+A galeria utiliza imagens de referência ilustrativas externas. Para lançar comercialmente, substitua as fontes dos `<img>` da seção `#inspiracoes` por fotos oficiais e autorizadas; revise legendas, textos e avisos. A propriedade `data-category` controla os filtros. Não associe fotografias de bancos de imagens a resultados de procedimentos.
+
+A logo GL continua **provisória** até receber a identidade oficial dourada da cliente. Ainda não foram fornecidos vídeos, retrato ou fotos reais de transformação. Todas as áreas novas foram desenhadas para funcionar sem esses itens, com ressalvas transparentes.
