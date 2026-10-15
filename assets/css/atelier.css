@@ -800,3 +800,19 @@ main img,main video {max-width:100%}
   .gallery-item:hover img {transform:none}
   .founder-link:hover {gap:26px}
 }
+
+
+/* Imagens de fundo ajustadas à resolução móvel.
+   A versão de alta resolução permanece para desktop; dados em menor quantidade
+   são transferidos no celular, sem comprometer a apresentação editorial. */
+@media(max-width:760px) {
+  .hero-photo {
+    background-image:url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=77');
+  }
+  .about-photo {
+    background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=850&q=78');
+  }
+  .feature-image {
+    background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=850&q=78');
+  }
+}
