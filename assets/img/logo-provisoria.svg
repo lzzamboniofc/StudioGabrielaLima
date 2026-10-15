@@ -6,15 +6,15 @@
       <stop offset="1" stop-color="#F5F5F5"/>
     </linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D5B47B"/>
-      <stop offset=".48" stop-color="#A67A3E"/>
-      <stop offset="1" stop-color="#E5C995"/>
+      <stop offset="0" stop-color="#F3D79C"/>
+      <stop offset=".48" stop-color="#C89A4B"/>
+      <stop offset="1" stop-color="#FFE1A3"/>
     </linearGradient>
   </defs>
   <rect x="1" y="1" width="118" height="118" rx="60" fill="url(#white)" stroke="#DDDDDD" stroke-width="2"/>
   <circle cx="60" cy="60" r="52" fill="none" stroke="url(#gold)" stroke-width="1.7"/>
-  <circle cx="60" cy="60" r="46" fill="none" stroke="#C8AA78" stroke-opacity=".37" stroke-width=".7"/>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#E2BE7A" stroke-opacity=".37" stroke-width=".7"/>
   <path d="M47 23h26M47 97h26" stroke="url(#gold)" stroke-width="1" stroke-linecap="round"/>
   <path d="M60 19l3 4-3 4-3-4zM60 93l3 4-3 4-3-4z" fill="url(#gold)"/>
-  <text x="60" y="76" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="400" font-size="48" letter-spacing="-7" fill="#99703A">GL</text>
+  <text x="60" y="76" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="400" font-size="48" letter-spacing="-7" fill="#A87830">GL</text>
 </svg>
