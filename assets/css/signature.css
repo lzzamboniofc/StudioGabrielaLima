@@ -1,0 +1,388 @@
+/*
+  STUDIO GABI LIMA — SIGNATURE EDITION
+  Preto | Branco | Dourado • Camada editorial (após gold-ice.css).
+  O design atual é preservado; novos destaques valorizam a assinatura visual.
+*/
+:root {
+  --sig-black: #101010;
+  --sig-dark: #191919;
+  --sig-white: #fff;
+  --sig-paper: #faf9f7;
+  --sig-gold: #b58b4e;
+  --sig-lightgold: #e2c38e;
+  --sig-goldline: rgba(190,151,93,.43);
+  --sig-ease: cubic-bezier(.22,1,.36,1);
+}
+body {background:var(--sig-white)}
+.hero h1 em {position:relative}
+.hero h1 em::after {
+  content:"";position:absolute;left:.02em;right:.02em;bottom:.01em;height:1px;
+  background:linear-gradient(90deg,transparent,#b58b4e,transparent);opacity:.6;
+}
+.hero-photo-wrap:after {border-color:rgba(233,196,138,.55)}
+.hero-photo-wrap:before {
+  content:"STUDIO GABI LIMA  ·  THE SIGNATURE";
+  position:absolute;z-index:3;top:50%;right:0;transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  padding:22px 7px 22px 9px;
+  border-left:1px solid rgba(223,190,138,.7);
+  background:rgba(13,13,13,.72);
+  color:#f6e8d1;
+  font-size:8px;font-weight:700;letter-spacing:.24em;pointer-events:none;
+}
+.hero-gold-ring {background:rgba(0,0,0,.22)}
+.about {background:#fff}
+.about-content {position:relative}
+.about-quote {
+  position:relative;
+  background:#171717;
+  padding:24px 30px 25px;
+  border-left:3px solid #bf965b;
+  max-width:515px;
+  box-shadow:0 20px 42px rgba(20,20,20,.09);
+}
+.about-quote span {color:#e0bd82}
+.about-quote p {color:#f7f2e9;line-height:1.27;font-size:clamp(25px,2.15vw,32px)}
+.about-art-frame {border-color:rgba(189,148,90,.77)}
+.about-seal {background:linear-gradient(140deg,#181818,#38302a);border-color:#c19a62}
+.about-seal b {color:#e2bd82}
+
+/* Uma seção editorial preta com marca dourada, sem falsa prova social. */
+.award-section {
+  position:relative;
+  overflow:hidden;
+  color:#f8f6f1;
+  padding:clamp(92px,9vw,132px) 0;
+  background:
+    radial-gradient(ellipse at 7% 110%,rgba(156,117,57,.20),transparent 37%),
+    radial-gradient(ellipse at 98% 0%,rgba(223,185,126,.085),transparent 38%),
+    #111;
+  border-top:1px solid #b58b4e;
+  border-bottom:1px solid #705735;
+}
+.award-section:before,.award-section:after {background:linear-gradient(90deg,transparent,rgba(183,143,79,.40),transparent)}
+.award-inner {position:relative;isolation:isolate}
+.award-corner {
+  position:absolute;right:0;top:-43px;color:#aa8b59;font-weight:700;
+  font-size:9px;letter-spacing:.31em;pointer-events:none;
+}
+.award-symbol {
+  border-color:rgba(220,183,125,.65);
+  color:#d9b77d;
+  background:radial-gradient(circle at center,#29231c,#141414 76%);
+  box-shadow:0 0 0 13px rgba(202,159,89,.055);
+}
+.award-symbol:before {border-color:rgba(220,183,125,.3)}
+.award-message h2 {color:#f7f5f1;line-height:1.03;max-width:860px}
+.award-message h2 em {color:#dab37c}
+.award-message p {color:#c6c0b8}
+.award-message .eyebrow,.award-section .light-eyebrow {color:#dab57d}
+.award-link {border-color:#b58b4e;box-shadow:0 0 0 5px rgba(188,148,84,.06)}
+.award-link .award-arrow {color:#efc990}
+.award-link small {color:#e8d5b9}
+.award-link:hover {background:#bf955c}
+.award-link:hover .award-arrow,.award-link:hover small {color:#111}
+
+/* A principal especialidade se destaca sem afetar o conteúdo das outras. */
+.services-section {background:linear-gradient(180deg,#fff 0%,#faf9f7 100%)}
+.services-heading {margin-bottom:56px}
+.service-list {gap:19px}
+.service-row {
+  isolation:isolate;
+  box-shadow:0 4px 18px rgba(10,10,10,.025);
+}
+.service-row:hover,.service-row:focus-within {
+  border-top-color:#b58b4e;
+  box-shadow:0 20px 48px rgba(21,21,21,.085);
+}
+.service-row:first-child,.service-row:first-child:hover,.service-row:first-child:focus-within {
+  background:
+    radial-gradient(ellipse at 100% 0%,rgba(193,144,68,.18),transparent 62%),
+    #111;
+  color:#fff;
+  border:1px solid #b58b4e;
+  border-top:2px solid #d3a965;
+  box-shadow:0 20px 52px rgba(12,12,12,.15);
+}
+.service-row:first-child:before {border:1px solid rgba(218,178,115,.22)}
+.service-row:first-child:after {
+  content:"ASSINATURA GABI LIMA";
+  position:absolute;bottom:35px;left:27px;z-index:1;
+  color:#c8a370;font-size:9px;font-weight:700;letter-spacing:.17em;
+  pointer-events:none;
+}
+.service-row:first-child .service-icon {color:#e3c38d}
+.service-row:first-child .service-main h3 {color:#fff}
+.service-row:first-child .service-main p {color:#cac6c0}
+.service-row:first-child .service-action {
+  color:#edce9b;border-color:#bd955f;
+}
+.service-row:first-child:hover .service-action,
+.service-row:first-child .service-action:focus-visible {
+  background:#d3aa70;color:#111;border-color:#d3aa70;
+}
+.service-row:first-child:hover,.service-row:first-child:focus-within {transform:translateY(-7px)}
+.services-foot {border-top-color:rgba(172,128,64,.27)}
+
+/* Fotografia + painel preto cria alternância forte sem perder a sofisticação. */
+.feature-section {background:#101010;border-color:#b18a53}
+.feature-image {filter:saturate(.76);position:relative}
+.feature-image:after {background:linear-gradient(0deg,rgba(0,0,0,.5),transparent 38%)}
+.feature-copy {
+  background:
+    radial-gradient(ellipse at 102% -9%,rgba(187,140,70,.15),transparent 55%),
+    #111;
+  border-left:1px solid rgba(181,139,78,.35);
+}
+.feature-copy:before {
+  content:"GL";font-family:var(--font-serif);
+  font-size:clamp(200px,26vw,410px);
+  color:rgba(212,167,104,.046);right:-5%;bottom:-9%;line-height:1;
+}
+.feature-copy .eyebrow {color:#dfb982}
+.feature-marker {color:#ad946e}
+.feature-copy h2 {color:#fff}
+.feature-copy h2 em {color:#e0b980}
+.feature-copy p {color:#c7c3bb}
+.feature-tags span {color:#e0be8c;border-color:rgba(189,146,83,.43);background:rgba(205,164,104,.06)}
+.feature-copy .button-outline {color:#fff;border-color:#c19a60;background:transparent}
+.feature-copy .button-outline .button-arrow {color:#e4c18a}
+.feature-copy .button-outline:hover {color:#111;background:#e0ba80}
+.feature-copy .button-outline:hover .button-arrow {color:#111}
+
+/* Galeria editorial clara com detalhes e textura neutra. */
+.gallery-section {background:#faf9f7}
+.gallery-grid {gap:17px}
+.gallery-item {
+  border:1px solid rgba(182,145,85,.40);
+  outline:0;box-shadow:0 14px 35px rgba(23,23,23,.05);
+}
+.gallery-item:focus-visible {outline:2px solid #b58b4e;outline-offset:5px}
+.gallery-item::before {
+  content:"";inset:12px;position:absolute;z-index:2;
+  border:1px solid rgba(242,218,183,.53);pointer-events:none;
+}
+.gallery-overlay strong {font-size:clamp(29px,2.9vw,45px)}
+.gallery-expand {background:rgba(12,12,12,.19)}
+.gallery-footer {border-top:1px solid rgba(174,132,69,.19);margin-top:25px}
+
+/* SEU MOMENTO: uma experiência útil e comercial, sem inventar resultados. */
+.curadoria-section {
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:clamp(94px,9vw,145px) 0;
+  background:
+    radial-gradient(ellipse at 0% 95%,rgba(169,123,57,.16),transparent 39%),
+    radial-gradient(ellipse at 98% 12%,rgba(154,113,54,.13),transparent 34%),
+    #0e0e0e;
+  border-top:1px solid #b58b4e;
+  border-bottom:1px solid #745936;
+  color:#fff;
+}
+.curadoria-section:before {
+  content:"";position:absolute;top:22px;bottom:22px;left:22px;right:22px;
+  border:1px solid rgba(179,137,76,.16);pointer-events:none;z-index:-1;
+}
+.curadoria-layout {display:grid;grid-template-columns:.83fr 1fr;gap:clamp(55px,8vw,130px);align-items:center}
+.curadoria-intro {position:relative;min-width:0}
+.curadoria-kicker {
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:.25em;font-weight:700;color:#d5ad77;
+}
+.curadoria-kicker-line {width:32px;height:1px;background:#b79057}
+.curadoria-watermark {
+  font-family:var(--font-serif);font-size:clamp(150px,22vw,350px);font-weight:500;
+  color:rgba(190,144,76,.065);
+  position:absolute;left:-45px;top:-115px;z-index:-1;
+  pointer-events:none;white-space:nowrap;line-height:1;
+}
+.curadoria-intro h2 {
+  font-family:var(--font-serif);font-weight:400;
+  font-size:clamp(65px,6.6vw,113px);letter-spacing:-.043em;line-height:.92;
+  margin:35px 0 33px;color:#fff;max-width:560px;
+}
+.curadoria-intro h2 em {font-weight:500;font-style:italic;color:#ddb77e}
+.curadoria-intro>p {color:#c6c1ba;font-size:13px;line-height:2.05;max-width:440px}
+.curadoria-footnote {
+  color:#d9b47e;border-top:1px solid rgba(190,151,93,.33);
+  padding-top:29px;margin-top:63px;max-width:400px;
+  font-size:9px;letter-spacing:.24em;font-weight:700;
+  display:flex;align-items:center;gap:16px;
+}
+.curadoria-footnote span {font-size:24px;font-weight:400}
+.curadoria-panel {
+  background:linear-gradient(145deg,#1d1d1d,#141414);
+  border:1px solid rgba(202,159,91,.53);
+  box-shadow:0 28px 80px rgba(0,0,0,.3);
+  padding:clamp(24px,3.5vw,49px);
+  position:relative;
+}
+.curadoria-panel:after {content:"";position:absolute;inset:8px;border:1px solid rgba(217,179,116,.1);pointer-events:none}
+.curadoria-panel-header {display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:26px}
+.curadoria-panel-header span {font-size:9px;letter-spacing:.14em;font-weight:700;color:#d5ac72}
+.curadoria-panel-header span:last-child {font-family:var(--font-serif);font-size:18px;letter-spacing:.07em;color:#94744a}
+.curadoria-options {display:grid;grid-template-columns:1fr;gap:9px}
+.curadoria-option {
+  min-height:59px;padding:14px 17px 14px 20px;
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:14px;
+  text-align:left;border:1px solid #3f3d39;background:#1a1a1a;color:#efefeb;
+  font:600 12px/1.5 var(--font-ui);letter-spacing:.012em;cursor:pointer;
+  transition:border-color .25s,background .25s,transform .25s;
+}
+.curadoria-option:hover {border-color:#a68455;background:#282520}
+.curadoria-option:focus-visible {outline:2px solid #e0ba80;outline-offset:2px}
+.curadoria-option.is-selected {border-color:#c49b61;background:#312820;color:#f9f0df}
+.curadoria-option.is-selected:hover {background:#3b2e21}
+.curadoria-check {
+  position:relative;display:grid;place-items:center;
+  width:25px;height:25px;flex:0 0 25px;border-radius:50%;
+  border:1px solid #716656;transition:background .2s,border-color .2s;
+}
+.curadoria-option.is-selected .curadoria-check {background:#d8b179;border-color:#d8b179}
+.curadoria-option.is-selected .curadoria-check:after {
+  content:"";position:absolute;left:8px;top:5px;width:6px;height:11px;
+  border-right:2px solid #111;border-bottom:2px solid #111;transform:rotate(45deg);
+}
+.curadoria-result {
+  margin-top:26px;padding:25px 0 22px;
+  border-top:1px solid rgba(192,151,94,.45);
+}
+.curadoria-result-label {font-size:9px;color:#d6ad75;font-weight:700;letter-spacing:.18em}
+.curadoria-result h3 {
+  margin:11px 0 6px;font:400 clamp(30px,3vw,45px)/1.1 var(--font-serif);color:#fff;
+}
+.curadoria-result p {margin:0;color:#bbb7b0;font-size:11px;line-height:1.9;max-width:465px;min-height:42px}
+.curadoria-button {
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+  width:100%;min-height:59px;padding:12px 17px 12px 22px;
+  color:#161616;background:linear-gradient(100deg,#d1aa71,#f0d2a1);
+  font-weight:800;font-size:11px;letter-spacing:.04em;
+  border:1px solid #e7c58f;transition:transform .26s,filter .26s;
+}
+.curadoria-button:hover {filter:brightness(1.08);transform:translateY(-2px)}
+.curadoria-button:focus-visible {outline:2px solid #f7e5c1;outline-offset:4px}
+.curadoria-button-icon {
+  display:grid;place-items:center;width:27px;height:27px;flex:none;
+  border:1px solid rgba(0,0,0,.26);border-radius:50%;
+}
+.curadoria-button-icon svg {display:block;width:16px;height:16px}
+.curadoria-disclaimer {color:#a7a19a;font-size:10px;line-height:1.8;margin:15px 0 0}
+
+/* O terceiro momento claro é leve e editorial. */
+.experience-section {background:#fff}
+.experience-steps {gap:19px}
+.experience-step,.experience-step+.experience-step {
+  background:linear-gradient(145deg,#fff,#faf8f4);
+  border:1px solid #e8e2d8;border-top:2px solid #b58b4e;
+  min-height:288px;
+  transition:transform .3s var(--sig-ease),box-shadow .3s var(--sig-ease);
+}
+.experience-step:hover {transform:translateY(-5px);box-shadow:0 18px 36px rgba(21,21,21,.065)}
+.step-top .step-visual {color:#ba9157;border-color:#c19b66}
+
+/* Convite final escuro, em contraste com a seção anterior e o FAQ. */
+.contact-banner {
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 2% 85%,rgba(179,126,49,.20),transparent 38%),
+    radial-gradient(ellipse at 95% 15%,rgba(214,164,88,.15),transparent 35%),
+    #111;
+  border-top:1px solid #9c763e;
+  border-bottom:1px solid #9c763e;
+}
+.contact-banner:before {
+  content:"";position:absolute;width:68vw;max-width:950px;aspect-ratio:1;
+  border:1px solid rgba(205,161,94,.19);border-radius:50%;
+  left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;
+}
+.contact-banner:after {
+  content:"";position:absolute;left:50%;top:50%;width:44vw;max-width:615px;aspect-ratio:1;
+  border:1px solid rgba(205,161,94,.12);border-radius:50%;
+  transform:translate(-50%,-50%);pointer-events:none;
+}
+.contact-banner-inner {isolation:isolate;padding-top:115px;padding-bottom:112px}
+.contact-banner-signature {
+  font:500 24px/1 var(--font-serif);letter-spacing:.34em;
+  color:#e4bf86;display:block;margin-bottom:21px;
+}
+.contact-banner-kicker {color:#e7bd81}
+.contact-banner h2 {color:#fff;max-width:850px;font-size:clamp(59px,7vw,112px)}
+.contact-banner h2 em {color:#dcb37b}
+.contact-banner .button-gold {
+  background:linear-gradient(105deg,#c49a60,#ead0a2);
+  color:#111;border:1px solid #ebcf9e;
+  min-width:225px;
+}
+.contact-banner .button-gold:hover {background:#fff;color:#111}
+.contact-banner .button-gold .button-arrow {color:#111}
+.banner-decoration {color:rgba(218,168,96,.13)}
+.faq-section {background:#faf9f7}
+.faq-items details[open] {background:rgba(185,143,79,.035)}
+.faq-items summary {padding-inline:6px}
+.faq-items summary:hover {color:#a87c3e}
+.location-section {background:#111}
+.location-info {background:#222}
+.site-footer {background:#090909}
+
+/* Microefeitos sutis de acabamento. */
+.button,.header-book,.text-arrow-link,.curadoria-button {will-change:transform}
+.service-action svg,.inline-link-icon svg,.header-arrow svg {transition:transform .25s var(--sig-ease)}
+.text-arrow-link:hover .inline-link-icon svg,
+.underlined-link:hover .inline-link-icon svg,
+.header-book:hover .header-arrow svg {transform:translate(2px,-2px)}
+@media(max-width:1280px) {
+  .curadoria-layout {grid-template-columns:.92fr 1fr;gap:55px}
+  .curadoria-intro h2 {font-size:clamp(64px,6.3vw,91px)}
+}
+@media(max-width:1040px) {
+  .curadoria-layout {grid-template-columns:.85fr 1fr;gap:33px}
+  .curadoria-intro h2 {font-size:clamp(60px,6.5vw,84px)}
+  .award-corner {top:-32px}
+  .service-row:first-child:after {left:19px}
+}
+@media(max-width:760px) {
+  .hero-photo-wrap:before {font-size:7px;padding:15px 5px}
+  .hero h1 em::after {display:none}
+  .about-quote {padding:21px 23px}
+  .award-section {padding:75px 0}
+  .award-corner {top:-38px;font-size:8px}
+  .services-heading {margin-bottom:34px}
+  .service-row:first-child:after {left:19px;bottom:26px;font-size:8px}
+  .feature-copy {border-left:0;border-top:1px solid rgba(181,139,78,.35)}
+  .gallery-grid {gap:11px}
+  .curadoria-section {padding:86px 0}
+  .curadoria-section:before {inset:12px}
+  .curadoria-layout {grid-template-columns:1fr;gap:46px}
+  .curadoria-intro h2 {font-size:clamp(73px,10.5vw,105px);max-width:650px}
+  .curadoria-intro>p {max-width:520px}
+  .curadoria-footnote {margin-top:29px;padding-top:20px}
+  .curadoria-watermark {top:-66px;left:auto;right:0;font-size:clamp(155px,26vw,240px)}
+  .curadoria-panel {width:100%;padding:28px}
+  .experience-step:hover {transform:none}
+  .contact-banner-inner {padding:90px 0}
+  .contact-banner:before {width:115vw}
+  .contact-banner:after {width:80vw}
+  .contact-banner-signature {margin-bottom:17px}
+}
+@media(max-width:450px) {
+  .curadoria-section {padding:76px 0}
+  .curadoria-intro h2 {font-size:clamp(62px,13vw,79px);margin:27px 0 22px}
+  .curadoria-intro>p {font-size:12px}
+  .curadoria-panel {padding:21px}
+  .curadoria-panel-header {margin-bottom:19px}
+  .curadoria-panel-header span {font-size:8px}
+  .curadoria-panel-header span:last-child {display:none}
+  .curadoria-option {font-size:11px;padding:13px 12px 13px 14px;min-height:55px}
+  .curadoria-result {margin-top:19px;padding-top:20px}
+  .curadoria-result h3 {font-size:35px}
+  .curadoria-button {font-size:10px;gap:11px;padding-left:15px}
+  .curadoria-button-icon {width:25px;height:25px}
+  .hero-photo-wrap:before {top:54%}
+  .service-row:first-child:after {left:24px;bottom:26px}
+  .award-corner {right:0;top:-30px}
+  .contact-banner h2 {font-size:clamp(58px,11vw,80px)}
+}
+@media(prefers-reduced-motion:reduce) {
+  .experience-step:hover,.service-row:first-child:hover,.service-row:first-child:focus-within,
+  .curadoria-button:hover {transform:none}
+  .curadoria-option,.curadoria-button {transition:none}
+}
