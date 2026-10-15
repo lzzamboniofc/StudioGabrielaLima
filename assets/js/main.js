@@ -25,8 +25,26 @@
     document.body.classList.toggle('menu-open', open);
   };
   toggle?.addEventListener('click', () => setMenuOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-  $$('#mobile-menu a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenuOpen(false); });
+  $('#mobile-menu a').forEach((link) => link.addEventListener('click', () => setMenuOpen(false)));
+  // Mantém navegação por teclado acessível quando o menu responsivo está aberto.
+  mobileNav?.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab' || !mobileNav.classList.contains('open')) return;
+    const focusables = [toggle, ...$('a[href]', mobileNav)].filter(Boolean);
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    const wasOpen = mobileNav?.classList.contains('open');
+    setMenuOpen(false);
+    if (wasOpen) toggle?.focus();
+  });
   document.addEventListener('click', (event) => {
     if (mobileNav?.classList.contains('open') && !event.target.closest('.site-header')) setMenuOpen(false);
   });
