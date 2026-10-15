@@ -286,3 +286,101 @@ body {background:var(--ice);color:var(--ink)}
 @media(prefers-reduced-motion:reduce) {
   .service-row,.service-row:hover,.service-row:focus-within {transform:none}
 }
+
+
+/* Refinamento de interface: ícones SVG centrados e sequência sem números ornamentais. */
+.service-row .service-icon {
+  grid-column:1;
+  grid-row:1;
+  justify-self:start;
+  align-self:center;
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  margin:0;
+  line-height:1;
+}
+.service-number {display:none}
+.step-top {align-items:center;justify-content:flex-start;margin-bottom:29px}
+.step-top .step-visual {
+  display:grid;
+  place-items:center;
+  width:51px;
+  height:51px;
+  padding:0;
+  border:1px solid rgba(174,128,63,.45);
+  border-radius:50%;
+  background:rgba(255,255,255,.48);
+  font-family:var(--font-serif);
+  font-size:30px;
+  line-height:1;
+  color:#a98043;
+  flex:0 0 51px;
+}
+.header-book,.button,.mobile-menu-cta {
+  align-items:center;
+}
+.button-arrow,.header-arrow,.award-arrow {
+  display:inline-grid;
+  place-items:center;
+  align-self:center;
+  flex:0 0 auto;
+  width:22px;
+  height:22px;
+  font-size:0;
+  line-height:1;
+}
+.button-arrow svg,.header-arrow svg,.award-arrow svg,
+.service-action svg,.gallery-expand svg,
+.location-icon-link svg,.lightbox-close svg,
+.lightbox-navigation button svg {
+  display:block;
+  width:20px;
+  height:20px;
+  flex:none;
+  margin:0;
+  transform:none;
+  vertical-align:middle;
+}
+.header-book {display:inline-flex;gap:12px;justify-content:space-between}
+.header-book .header-arrow {margin-left:0;color:#efd4a4}
+.service-action,.gallery-expand,.location-icon-link,
+.lightbox-close,.lightbox-navigation button {
+  display:grid;
+  place-items:center;
+  line-height:1;
+  padding:0;
+}
+.service-row:hover .service-action,
+.service-action:focus-visible {
+  transform:none;
+}
+.service-row:hover .service-action svg,
+.service-action:focus-visible svg {
+  transform:translate(1px,-1px);
+}
+.service-action svg {width:21px;height:21px;transition:transform .25s ease}
+.gallery-expand svg {width:19px;height:19px}
+.location-icon-link svg {width:22px;height:22px}
+.award-link .award-arrow {width:26px;height:26px;color:#a87c3e}
+.award-link .award-arrow svg {width:22px;height:22px}
+.award-link:hover .award-arrow {color:#fff}
+.lightbox-close svg {width:21px;height:21px}
+.lightbox-navigation button svg {width:19px;height:19px}
+@media(max-width:1040px) {
+  .header-book {display:none}
+  .mobile-menu-cta {align-items:center;justify-content:space-between}
+}
+@media(max-width:760px) {
+  .step-top {margin-bottom:21px}
+  .step-top .step-visual {width:47px;height:47px;flex-basis:47px;font-size:28px}
+  .service-row .service-icon {width:38px;height:38px;font-size:29px}
+  .gallery-expand svg {width:16px;height:16px}
+  .award-link .award-arrow {width:24px;height:24px}
+}
+@media(max-width:540px) {
+  .service-row .service-icon {width:37px;height:37px;font-size:29px}
+  .service-action svg {width:18px;height:18px}
+  .gallery-expand svg {width:15px;height:15px}
+}
