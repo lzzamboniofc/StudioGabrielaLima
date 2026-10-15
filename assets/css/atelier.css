@@ -421,3 +421,168 @@
   .brand-words>span {font-size:13px}
   .header-book {font-size:9px;padding-inline:11px;gap:6px}
 }
+
+
+/* BRILHO CHAMPAGNE — ACABAMENTO FINAL
+   Um dourado mais luminoso, mantendo texto escuro nas superfícies claras
+   e destaque dourado claro sobre preto para preservar a leitura. */
+:root {
+  --gold:#C89A4B;
+  --gold-soft:#F0CE8B;
+  --gold-line:rgba(201,154,75,.48);
+  --sig-gold:#CFA356;
+  --sig-lightgold:#F3D79C;
+  --sig-goldline:rgba(220,173,91,.5);
+  --atelier-gold:#C89A4B;
+  --atelier-gold-light:#F3D79C;
+  --atelier-line:rgba(214,165,80,.43);
+  --premium-gold:#D5AB61;
+  --premium-glow:#F3D79C;
+  --premium-gold-ink:#A7782C;
+}
+::selection {background:#D8AF68;color:#111}
+:focus-visible {outline-color:#D3A256}
+.brand-words strong {color:#A7782C}
+.announcement-star,.announcement-location span {color:#F3D79C}
+.eyebrow .line,.founder-line,.curadoria-kicker-line {background:#D0A051}
+.hero .hero-eyebrow,.dark-eyebrow,.founder-eyebrow,.portfolio-intro>div>span {color:#A7782C}
+.hero h1 em,.section-title em,.founder-copy h2 em,.founder-script,
+.portfolio-intro h3 em,.comparison-copy h3 em {
+  color:#B38131;
+}
+.hero-gold-ring {border-color:#F3D79C;color:#F3D79C}
+.hero-photo-wrap:after {border-color:rgba(243,215,156,.7)}
+.hero-photo-wrap:before {border-left-color:#E9C583}
+.about-art-frame,.founder-visual:before {border-color:rgba(211,161,78,.75)}
+.about-seal {border-color:#E2BE7A}
+.about-quote {border-left-color:#D5AA61}
+.about-quote span,.about-seal b {color:#F3D79C}
+.founder-photo-placeholder {border-color:#D2A559}
+.founder-art-monogram,.founder-art-script {color:#F0CE8B}
+.founder-photo-placeholder:after {border-color:rgba(236,188,109,.5)}
+.founder-portrait-frame {border-color:rgba(229,190,122,.55)}
+.founder-photo-note {border-top-color:#D3A65F}
+.founder-note-star {color:#F3D79C}
+.founder-specialties span {border-color:rgba(195,144,62,.54)}
+.founder-link svg {color:#C89A4B}
+.award-section,.curadoria-section {border-top-color:#D0A45E}
+.award-symbol {border-color:rgba(243,215,156,.7);color:#F3D79C}
+.award-message .eyebrow,.award-section .light-eyebrow,
+.feature-copy .eyebrow,.curadoria-kicker,
+.curadoria-result-label,.curadoria-panel-header span:first-child {
+  color:#F3D79C;
+}
+.award-message h2 em,.feature-copy h2 em,.curadoria-intro h2 em,
+.contact-banner h2 em,.location-head h2 em {color:#F0CE8B}
+.award-link {border-color:#D3A65F}
+.award-link .award-arrow,.award-link small {color:#F3D79C}
+.award-link:hover {background:#D3A65F}
+.award-link:hover .award-arrow,.award-link:hover small {color:#161616}
+.service-row:first-child,.service-row:first-child:hover,.service-row:first-child:focus-within {
+  border-color:#D4A85F;border-top-color:#F0CE8B;
+}
+.service-row:first-child .service-icon,
+.service-row:first-child .service-action {color:#F3D79C}
+.service-row:first-child:after {color:#E2BE7A}
+.service-row:first-child .service-action {border-color:#D9B271}
+.service-row:first-child:hover .service-action,
+.service-row:first-child .service-action:focus-visible {
+  background:#E2BE7A;border-color:#E2BE7A;color:#161616;
+}
+.service-row:not(:first-child) {border-top-color:#D2A65B}
+.service-row:not(:first-child) .service-icon {color:#C39952}
+.service-row:not(:first-child):hover .service-action {background:#C89A4B;border-color:#C89A4B}
+.feature-tags span {border-color:rgba(223,178,103,.6);color:#F0CE8B}
+.feature-copy .button-outline {border-color:#E2BE7A}
+.feature-copy .button-outline .button-arrow {color:#F3D79C}
+.feature-copy .button-outline:hover {background:#E2BE7A;color:#161616}
+.feature-copy .button-outline:hover .button-arrow {color:#161616}
+.gallery-item {border-color:rgba(213,168,95,.6)}
+.gallery-expand {border-color:#E2BE7A}
+.gallery-grid-refined .gallery-overlay>span:first-child {color:#F3D79C}
+.portfolio-filter:hover {border-color:#C89A4B}
+.portfolio-filter.is-active {background:#151515;color:#F3D79C;border-color:#C89A4B}
+.portfolio-intro,.gallery-footer {border-top-color:rgba(201,154,75,.33)}
+.comparison-widget {border-color:#D3A65F}
+.comparison-handle {border-color:#D3A65F}
+.comparison-result-label,.comparison-label {color:#AD7D31}
+.comparison-contact svg {color:#C89A4B}
+.curadoria-panel {border-color:rgba(226,190,122,.65)}
+.curadoria-option.is-selected {border-color:#E2BE7A}
+.curadoria-option.is-selected .curadoria-check {background:#E2BE7A;border-color:#E2BE7A}
+.curadoria-result {border-top-color:rgba(226,190,122,.52)}
+.curadoria-button,
+.contact-banner .button-gold {
+  background:linear-gradient(110deg,#C89A4B 0%,#F3D79C 52%,#D7AC62 100%);
+  border-color:#F3D79C;color:#161616;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 11px 25px rgba(161,113,42,.16);
+}
+.curadoria-button:hover,.contact-banner .button-gold:hover {
+  background:linear-gradient(110deg,#E2BE7A,#FFE7B2 55%,#E2BE7A);
+  color:#111;
+}
+.contact-banner-kicker,.contact-banner-signature {color:#F3D79C}
+.faq-items summary .faq-icon {border-color:#C89A4B;color:#B98634}
+.faq-items details[open] summary .faq-icon {background:#C89A4B;border-color:#C89A4B;color:#111}
+.location-info .location-overline,.location-data>span {color:#F3D79C}
+.location-buttons .button-gold {
+  background:linear-gradient(105deg,#C89A4B,#F3D79C);color:#161616;
+}
+.location-buttons .button-gold .button-arrow {color:#161616}
+.site-footer .footer-column h3,.footer-brand-link .brand-words strong {color:#F3D79C}
+.reading-progress {background:linear-gradient(90deg,#AD7932,#F3D79C,#C89A4B)}
+/* Agende aqui: ícone de calendário/check perfeitamente centralizado. */
+.floating-whatsapp.floating-booking {
+  display:inline-flex;align-items:center;justify-content:center;gap:11px;
+  padding:10px 18px 10px 10px;
+  min-height:56px;max-width:calc(100vw - 28px);
+  border:1px solid #F3D79C;border-radius:999px;
+  color:#191919;background:linear-gradient(115deg,#C99B50 0%,#F3D79C 49%,#D6A759 100%);
+  box-shadow:0 10px 35px rgba(9,9,9,.20),0 0 20px rgba(226,190,122,.18);
+  text-shadow:none;
+  font-size:12px;font-weight:800;letter-spacing:.015em;
+  transition:transform .26s var(--sig-ease),box-shadow .26s,background .26s;
+  isolation:isolate;
+}
+.floating-whatsapp.floating-booking:hover {
+  color:#151515;
+  background:linear-gradient(115deg,#E1BC7B 0%,#FFE7B2 54%,#E1BC7B 100%);
+  transform:translateY(-3px);
+  box-shadow:0 16px 38px rgba(9,9,9,.24),0 0 25px rgba(226,190,122,.27);
+}
+.floating-booking .floating-calendar {
+  display:grid;place-items:center;flex:0 0 38px;
+  width:38px;height:38px;margin:0;padding:0;
+  border:1px solid rgba(0,0,0,.17);
+  border-radius:50%;background:rgba(18,18,18,.09);color:#181818;
+  line-height:1;
+}
+.floating-booking .floating-calendar svg {
+  display:block;flex:none;width:22px;height:22px;
+  stroke:currentColor;stroke-width:1.85;
+  margin:0;padding:0;
+}
+.floating-booking .floating-label {
+  display:inline;white-space:nowrap;margin:0;padding:0;
+  font-size:12px;line-height:1.25;color:inherit;font-weight:800;
+}
+.floating-booking:focus-visible {outline:3px solid #F3D79C;outline-offset:4px}
+@media(max-width:760px) {
+  .floating-whatsapp.floating-booking {
+    right:14px;bottom:max(15px,env(safe-area-inset-bottom));
+    min-height:54px;padding:8px 15px 8px 8px;gap:9px;
+  }
+  .floating-booking .floating-calendar {
+    width:36px;height:36px;flex-basis:36px;
+  }
+  .floating-booking .floating-calendar svg {width:21px;height:21px}
+  .floating-booking .floating-label {display:inline;font-size:11px}
+}
+@media(max-width:360px) {
+  .floating-whatsapp.floating-booking {gap:7px;padding-right:11px}
+  .floating-booking .floating-label {font-size:10px}
+}
+@media(prefers-reduced-motion:reduce) {
+  .floating-whatsapp.floating-booking {transition:none}
+  .floating-whatsapp.floating-booking:hover {transform:none}
+}
