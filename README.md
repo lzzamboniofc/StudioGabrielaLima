@@ -1,6 +1,6 @@
 # Studio Gabi Lima — Site institucional
 
-Protótipo comercial **independente** criado para o Studio Gabi Lima (Studio Gabriela Lima), salão de beleza em Itu/SP. Visual editorial premium com tons de dourado, creme e grafite, inspirado na organização do projeto Espaço Sol, mas com identidade visual e código próprios.
+Protótipo comercial **independente** criado para o Studio Gabi Lima (Studio Gabriela Lima), salão de beleza em Itu/SP. Visual editorial premium na identidade **Ouro & Gelo**: gelo perolado, branco frio, dourado champagne e grafite azulado. Inspirado na organização do projeto Espaço Sol, com identidade visual e código próprios.
 
 > **Atenção antes de apresentar ou publicar como site oficial:** a marca e as fotos definitivas ainda não foram enviadas. O monograma GL é provisório; fotos e composições atuais são **ilustrativas, não representam trabalhos realizados pelo Studio**. Confirme textos promocionais e serviços com a proprietária antes da entrega.
 
@@ -29,7 +29,8 @@ O GitHub Pages é estático, portanto não executa `server.js`, mas todos os arq
 ## Estrutura
 
 - `index.html` — todo o conteúdo institucional, links, dados estruturados para buscadores e componentes visuais.
-- `assets/css/styles.css` — layout responsivo e animações.
+- `assets/css/styles.css` — layout responsivo e animações originais.
+- `assets/css/gold-ice.css` — identidade Ouro & Gelo: cores, tipografia editorial, cards de serviços e refinamentos responsivos.
 - `assets/js/config.js` — WhatsApp, Instagram, mensagens por serviço, endereço e rota.
 - `assets/js/main.js` — menu mobile, animações, navegação, WhatsApp contextual e galeria ampliada.
 - `assets/img/logo-provisoria.svg` — monograma TEMPORÁRIO (trocar pela logo da cliente).
@@ -49,7 +50,7 @@ O GitHub Pages é estático, portanto não executa `server.js`, mas todos os arq
 ## Recursos incluídos
 
 - Responsivo (desktop, tablet e celular) com menu expansível acessível.
-- Visual premium com tipografia editorial, transições e animações moderadas.
+- Visual premium Ouro & Gelo, tipografia editorial Cormorant Garamond e componentes próprios, com transições e animações moderadas.
 - Serviços com mensagens de WhatsApp específicas.
 - Apresentação do Studio, reconhecimento, serviços, inspirações, etapas do atendimento e perguntas frequentes.
 - Lightbox na galeria, com navegação por setas e teclado.
@@ -67,3 +68,15 @@ WhatsApp: **(11) 94510-7378** · Email: **studiogabrielaalima@gmail.com** · Ins
 ## Observação comercial
 
 O protótipo é um ponto de partida para apresentação e negociação, não uma confirmação de associação oficial com o estabelecimento. Antes da publicação definitiva, obtenha aprovação da identidade visual, imagem, descrições de serviços e informações comerciais.
+
+## Identidade Ouro & Gelo (versão 2)
+
+A paleta está concentrada em `assets/css/gold-ice.css`, que é carregado após a folha de estilos base e pode ser substituído sem reescrever o site.
+
+- Gelo perolado `#EDF3F4` e branco frio `#FBFDFC` para áreas amplas;
+- ouro champagne `#AC8040` e dourado claro `#DDBE86` para elementos de assinatura;
+- grafite azulado `#263235` para títulos, navegação e contraste;
+- serviços em cards editoriais, bordas finas, detalhes metalizados e espaços mais leves;
+- marca GL e favicon ainda **provisórios**, não substituem a logo oficial.
+
+Não foram incluídos resultados ou depoimentos inventados; fotografias atuais continuam ilustrativas e devem ser trocadas por fotos autorizadas antes do lançamento comercial.
